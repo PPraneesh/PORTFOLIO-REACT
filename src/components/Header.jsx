@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 export default function Header(props) {
   let location = useLocation();
   useEffect(() => {
@@ -71,50 +71,50 @@ export default function Header(props) {
           </div>
         </div>
         <ul className="list">
-          <Link
-            onMouseEnter={() => handleLinkEnter("..")}
-            onMouseLeave={handleMouseLeave}
-            className="link"
-            to=""
-          >
-            /home
+          <Link className="link" to="">
+            <span
+              onMouseEnter={() => handleLinkEnter("..")}
+              onMouseLeave={handleMouseLeave}
+            >
+              /home
+            </span>
           </Link>
-          <Link
-            onMouseEnter={() => handleLinkEnter("about")}
-            onMouseLeave={handleMouseLeave}
-            className="link"
-            to="about"
-          >
-            About me
+          <Link className="link" to="about">
+            <span
+              onMouseEnter={() => handleLinkEnter("about")}
+              onMouseLeave={handleMouseLeave}
+            >
+              About me
+            </span>
           </Link>
           <div className="dropdown">
             <span className={`dropbtn ${props.route.theme}_color link`}>
               Show more ▾
             </span>
             <div className="dropdown-content">
-              <Link
-                onMouseEnter={() => handleLinkEnter("blogs")}
-                onMouseLeave={handleMouseLeave}
-                className="link"
-                to="blogs"
-              >
-                Blogs
+              <Link className="link" to="blogs">
+                <span
+                  onMouseEnter={() => handleLinkEnter("blogs")}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  Blogs
+                </span>
               </Link>
-              <Link
-                onMouseEnter={() => handleLinkEnter("projects")}
-                onMouseLeave={handleMouseLeave}
-                className="link"
-                to="projects"
-              >
-                My Projects
+              <Link className="link" to="projects">
+                <span
+                  onMouseEnter={() => handleLinkEnter("projects")}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  My Projects
+                </span>
               </Link>
-              <Link
-                onMouseEnter={() => handleLinkEnter("resume")}
-                onMouseLeave={handleMouseLeave}
-                className="link"
-                to="resume"
-              >
-                My resume
+              <Link className="link" to="resume">
+                <span
+                  onMouseEnter={() => handleLinkEnter("resume")}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  My resume
+                </span>
               </Link>
             </div>
           </div>
@@ -127,4 +127,4 @@ export default function Header(props) {
 Header.propTypes = {
   route: PropTypes.object.isRequired,
   setRoute: PropTypes.func.isRequired,
-}
+};
