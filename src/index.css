@@ -81,9 +81,12 @@ a:hover {
   text-decoration: underline;
 }
 .body {
+  /* display: flex;
+  flex-direction: column;
+  height: 100%; */
   max-width: 750px;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 3rem 3rem 0 3rem;
 }
 .head {
   display: flex;
@@ -203,6 +206,17 @@ a {
   padding: 0.5rem 0.45rem;
   font-size: 1rem;
   font-family: "Fira Code", Monaco, Consolas, Ubuntu Mono, monospace;
+}
+.SM-button{
+  background-color: #222129;
+  color: #fff;
+  margin-top: 1rem;
+  padding: 0.5rem 0.45rem;
+  width: 100%;
+  font-size: 1rem;
+  font-family: "Fira Code", Monaco, Consolas, Ubuntu Mono, monospace;
+  border: 1px solid #ff6266;
+
 }
 .buttons:hover {
   text-decoration: underline;
