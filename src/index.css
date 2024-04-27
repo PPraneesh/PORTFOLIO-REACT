@@ -12,7 +12,7 @@ body {
 .yellow {
   background: #ffa86a;
 }
-.red {
+.red{
   background: #ff6266;
 }
 .green_color {
@@ -28,10 +28,13 @@ body {
   border: 1px solid #78e2a0;
 }
 .yellow_Bcolor {
-  border: 1px solid hsl(25, 100%, 71%);
+  border: 1px solid #ffa96b;
 }
 .red_Bcolor {
   border: 1px solid #ff6266;
+  &:hover{
+    background:#ff62666b;
+  }
 }
 .repeat_yellow {
   content: "";
@@ -80,10 +83,11 @@ a {
 a:hover {
   text-decoration: underline;
 }
+button:hover{
+  cursor: pointer;
+}
 .body {
-  /* display: flex;
-  flex-direction: column;
-  height: 100%; */
+
   max-width: 750px;
   margin: 0 auto;
   padding: 3rem 3rem 0 3rem;
@@ -216,7 +220,10 @@ a {
   font-size: 1rem;
   font-family: "Fira Code", Monaco, Consolas, Ubuntu Mono, monospace;
   border: 1px solid #ff6266;
-
+  &:hover{
+    text-decoration: underline;
+    background-color: #ff62666b;
+  }
 }
 .buttons:hover {
   text-decoration: underline;
