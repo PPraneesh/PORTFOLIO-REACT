@@ -6,7 +6,7 @@ export default function Projects(props) {
       name: "The Coder Companion",
       description: "The Coder Companion: Your gateway to intuitive programming mastery. With AI assistance and a user-friendly interface, embark on an efficient journey to tackle coding challenges with confidence.",
       linkFiles: "https://github.com/PPraneesh/theCoderCompanion",
-      linkProject: "#"
+      linkProject: "https://the-coder-companion.vercel.app/"
     }, {
       name: "NextPad",
       description: "NextPad revolutionizes the writing experience, empowering authors with unprecedented control to edit, adjust visibility, and unleash their creativity seamlessly. Welcome to the future of writing, where freedom and flexibility reign supreme.",

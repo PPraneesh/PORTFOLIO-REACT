@@ -9,10 +9,10 @@ import { useEffect } from "react";
 export default function Root(props) {
   // Store the toast object in a variable
   const toast = Toastify({
-    text: "Explore my AI-infused creativity in my latest Projects!",
-    duration: 3000,
+    text: "Check out my new Projects,\nbrimming with AI and Creativity!",
+    duration: 5000,
     destination: "/projects",
-    newWindow: true,
+    newWindow: false,
     close: true,
     gravity: "top", // `top` or `bottom`
     position: "right", // `left`, `center` or `right`
