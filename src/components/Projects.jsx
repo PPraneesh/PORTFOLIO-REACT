@@ -58,16 +58,20 @@ export default function Projects(props) {
           <div className="project" key={i}>
             <h2 className="<%=theme%>_color">{projectDetails.name}</h2>
             <p>{projectDetails.description}</p>
-            <a href={projectDetails.linkProject}>
-              <button className={`buttons ${props.route.theme}_Bcolor`}>
-                View Project
-              </button>
-            </a>{" "}
-            <a href={projectDetails.linkFiles}>
-              <button className={`buttons ${props.route.theme}_Bcolor`}>
-                View Project Files
-              </button>
-            </a>
+
+            <div className="proj-buttons">
+                <button className={`buttons ${props.route.theme}_Bcolor`}>
+              <a href={projectDetails.linkProject}>
+                  View Project
+              </a>
+                </button>
+                {" "}
+                <button className={`buttons ${props.route.theme}_Bcolor`}>
+              <a href={projectDetails.linkFiles}>
+                  View Project Files
+              </a>
+                </button>
+            </div>
           </div>
         );
       })}

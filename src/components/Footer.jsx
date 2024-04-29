@@ -15,7 +15,7 @@ export default function Footer() {
             <img
               width="48"
               height="48"
-              src="https://img.icons8.com/windows/48/000000/github.png"
+              src="https://img.icons8.com/material-outlined/48/FFFFFF/github.png"
               alt="github"
             />
           </a>

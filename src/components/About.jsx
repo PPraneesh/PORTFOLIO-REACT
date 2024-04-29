@@ -7,15 +7,22 @@ export default function About(props) {
       <p className={`${props.route.theme}_color about_name`}>Parshi Praneesh</p>
       <div className="post">
         <h2>Allow Me To Introduce Myself</h2>
-        <p style={{ textAlign: "justify" }}>
+        <p>
           Heya I`m Parshi Praneesh, a web developer with expertise in languages
-          like
+          like{" "}
           <span className="about-code">C</span>,{" "}
           <span className="about-code">C++</span>,{" "}
+          <span className="about-code">Python</span>,{" "}
+          <span className="about-code">Java</span>,{" "}
           <span className="about-code">JavaScript</span>,{" "}
           <span className="about-code">react.js</span>,{" "}
-          <span className="about-code">Java</span>, and{" "}
-          <span className="about-code">Python</span>. In a notable hackathon, my
+          <span className="about-code">Node.js</span>,{" "}
+          <span className="about-code">Express.js</span>,{" "}
+          <span className="about-code">mongodb</span>,{" "}
+          <span className="about-code">ejs</span>,{" "}
+          <span className="about-code">flask</span>,and{" "}
+          <span className="about-code">jinja2</span>.{" "}
+          In a notable hackathon, my
           team mastered Python for web development in a day and built a winning
           chatbot with GPT-3.5`s API and MongoDB in just two days.
           <br />
@@ -25,8 +32,8 @@ export default function About(props) {
           for replicating websites with precision. Eager to delve into machine
           learning, I`m open to collaborations to create exceptional websites.
           Let`s explore the possibilities together!
-          <br />
-          <br />
+        </p>
+        <div className="github-calendar">
           <h2>My Github Contributions</h2>
           <GitHubCalendar
             username="PPraneesh"
@@ -37,10 +44,9 @@ export default function About(props) {
             fontSize={14}
             style={{ cursor: "crosshair" }}
           />
-          Thanks for stopping by!!{" "}
-          <span className="about-code">Have a nice day :)</span>
-        </p>
       </div>
+          <p>Thanks for stopping by!!{" "}<span className="about-code">Have a nice day :)</span></p>
+      </div>  
     </>
   );
 }

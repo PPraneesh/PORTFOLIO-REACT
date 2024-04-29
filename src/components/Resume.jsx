@@ -16,7 +16,7 @@ export default function Resume(props) {
         <br />
         <div className="download">
           <a href={pdf} download>
-            <button className={`buttons ${props.route.theme}_Bcolor`}>
+            <button className={`green-button ${props.route.theme}_Bcolor`}>
               Download Resume
             </button>
           </a>
