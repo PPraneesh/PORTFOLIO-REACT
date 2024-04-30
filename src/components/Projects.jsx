@@ -68,7 +68,7 @@ export default function Projects(props) {
                 {" "}
                 <button className={`buttons ${props.route.theme}_Bcolor`}>
               <a href={projectDetails.linkFiles}>
-                  View Project Files
+                  View Files
               </a>
                 </button>
             </div>
