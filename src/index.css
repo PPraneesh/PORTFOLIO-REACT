@@ -168,6 +168,21 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 2rem;
 }
+.project h2{
+  margin-bottom: 0;
+}
+.project-cont{
+  display: flex;
+  gap:1rem;
+  margin: 1rem 0;
+}
+.project-info p{
+  margin:0 0 1rem 0;
+}
+.project-gif img{
+  width: 20rem;
+  padding: 8px 0 0 0;
+}
 .footer {
   display: flex;
   flex-direction: column;
@@ -249,6 +264,12 @@ a {
 }
 .fname {
   color: #888888cd;
+}
+@media screen and (max-width: 750px) {
+  .project-cont{
+    flex-direction: column;
+    align-items: center;
+  }
 }
 @media screen and (max-width: 650px) {
   .body {
