@@ -46,7 +46,7 @@ export default function Home() {
       ]}
       className='type-animation'
       wrapper="span"
-      speed={50}
+      speed={30}
       style={{ fontSize: '2rem'}}
       repeat={Infinity}
     />
