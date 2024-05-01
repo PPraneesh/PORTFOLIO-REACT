@@ -32,16 +32,17 @@ export default function Home() {
     <>
       <div className="content">
         <div className="hello">
+        <h1>Hey There!!</h1>
         <TypeAnimation
       sequence={[
         'I`m Praneesh',
         3000, 
         'I`m an Undergrad',
-        2000,
+        2500,
         'I`m a Web Developer',
-        2000,
+        2500,
         'I`m an ML enthusiast',
-        2000
+        2500
       ]}
       className='type-animation'
       wrapper="span"
