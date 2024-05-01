@@ -4,14 +4,14 @@ import { useEffect } from "react";
 
 export default function Home() {
   const toast = Toastify({
-    text: "Check out my new Projects,\nbrimming with AI and Creativity!",
+    text: "Check out the new projects page!",
     duration: 5000,
     destination: "/projects",
     newWindow: false,
     close: true,
-    gravity: "top", // `top` or `bottom`
-    position: "right", // `left`, `center` or `right`
-    stopOnFocus: true, // Prevents dismissing of toast on hover
+    gravity: "top", 
+    position: "right", 
+    stopOnFocus: true, 
     style: {
       background: "rgb(34, 33, 41)",
       display: "flex",
