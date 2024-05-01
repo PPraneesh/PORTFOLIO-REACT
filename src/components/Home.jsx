@@ -1,6 +1,7 @@
 import Toastify from 'toastify-js'
 import "toastify-js/src/toastify.css"
 import { useEffect } from "react";
+import { TypeAnimation } from 'react-type-animation';
 
 export default function Home() {
   const toast = Toastify({
@@ -31,7 +32,23 @@ export default function Home() {
     <>
       <div className="content">
         <div className="hello">
-          <h1>Hey There!! I`m Praneesh</h1>
+        <TypeAnimation
+      sequence={[
+        'I`m Praneesh',
+        3000, 
+        'I`m an Undergrad',
+        2000,
+        'I`m a Web Developer',
+        2000,
+        'I`m an ML enthusiast',
+        2000
+      ]}
+      className='type-animation'
+      wrapper="span"
+      speed={50}
+      style={{ fontSize: '2rem'}}
+      repeat={Infinity}
+    />
           <p>
             Welcome to my digital space! I`m Praneesh, a web developer
             proficient in languages like {" "}

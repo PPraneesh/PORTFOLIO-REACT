@@ -148,8 +148,8 @@ a {
   border: 1px solid #ffa86a;
 }
 
-.hello > h1 {
-  margin: 0.5rem;
+.type-animation{
+    font-size: 3rem;
 }
 .about-code {
   color: #78e2a0;
