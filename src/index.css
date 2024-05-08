@@ -212,7 +212,9 @@ a {
 .annotationLayer {
   display: none;
 }
-
+.container h1{
+  margin: 0;
+}
 .react-pdf__Page__canvas {
   margin: 0 auto;
   width: 100% !important;
@@ -220,6 +222,10 @@ a {
   display: block;
   border: 1px solid #000;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+.thoughts{
+  margin-top: 1rem;
+
 }
 .proj-buttons{
   display: flex;
