@@ -108,25 +108,24 @@ a {
 .dropdown {
   margin: 0.4rem 0;
 }
-.content h2{
-}
 .articles h2{
   color: #ffa96b;
   border-bottom: 3px dotted #ffa96b;
+  margin: 1rem 0 0.5rem 0;
 }
 .articles h2::after{
-  content: "";
+    content: "";
     border-bottom: 3px dotted #ffa96b;
     width: 100%;
     display: block;
     margin-bottom: 3px;
 }
 .article{
-  margin: 1rem 0rem;
-  padding: 0.75rem 0rem;
+  padding: 1rem 0rem;
   border-bottom: rgba(255, 255, 255, 0.2) 1px solid;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .article img{
   width: 4rem;
