@@ -93,11 +93,11 @@ export default function Home() {
         </div>
         <div className="articles">
           <h2>Few articles which I read in recent times...</h2>
-          {articles.map((article) => {
+          {articles.map((article,index) => {
             return (
-              <div className='article'>
+              <div className='article' key={index}>
                 <div>
-                  <a href={article.link}>
+                  <a href={article.link} target='_blank'>
                     <h3>{article.title}</h3>
                   </a>
                   <p>{article.desc}</p>

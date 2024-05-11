@@ -3,7 +3,7 @@ export default function Footer() {
     <>
       <div className="footer">
         <div className="profiles">
-          <a href="https://www.linkedin.com/in/parshipraneesh">
+          <a href="https://www.linkedin.com/in/parshipraneesh" target="_blank">
             <img
               width="48"
               height="48"
@@ -11,7 +11,7 @@ export default function Footer() {
               alt="linkedin"
             />
           </a>
-          <a href="https://github.com/PPraneesh">
+          <a href="https://github.com/PPraneesh" target="_blank">
             <img
               width="48"
               height="48"
@@ -19,7 +19,7 @@ export default function Footer() {
               alt="github"
             />
           </a>
-          <a href="mailto:parshipraneesh8@gmail.com">
+          <a href="mailto:parshipraneesh8@gmail.com" target="_blank">
             <img
               width="48"
               height="48"

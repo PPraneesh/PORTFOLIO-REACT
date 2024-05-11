@@ -77,10 +77,10 @@ export default function Projects(props) {
             </div>
                 <div className="proj-buttons">
                   <button className={`buttons ${props.route.theme}_Bcolor`}>
-                    <a href={projectDetails.linkProject}>View Project</a>
+                    <a href={projectDetails.linkProject} target="_blank">View Project</a>
                   </button>{" "}
                   <button className={`buttons ${props.route.theme}_Bcolor`}>
-                    <a href={projectDetails.linkFiles}>View Files</a>
+                    <a href={projectDetails.linkFiles} target="_blank">View Files</a>
                   </button>
                 </div>
           </div>
