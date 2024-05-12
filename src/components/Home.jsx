@@ -30,17 +30,17 @@ export default function Home() {
   }, []);
   const articles = [{
     title: "bloom filter - a data structure",
-    desc: "A data structure that lies..",
+    desc: "A data structure that lies.. 😲\nhow does it help? is it even useful?\n That's intresting I guess,  go ahead read the article.",
     link: "https://samwho.dev/bloom-filters/",
     imgUrl: "https://img.icons8.com/glyph-neue/100/FFFFFF/parallel-tasks.png"
   }, {
     title: "do lava lamps encrypt?",
-    desc: "How random is your computer?",
+    desc: "How random is your computer?\n Is it random enough to encrypt?\n Cloudflare says NO, that's why they used lava lamps for encryption, wondering how? go ahead read the article.",
     link: "https://www.cloudflare.com/en-gb/learning/ssl/lava-lamp-encryption/",
     imgUrl: "https://img.icons8.com/ios/100/FFFFFF/lock--v1.png"
   }, {
-    title: "The Internet Protocols",
-    desc: "The handshakes and the packets",
+    title: "When you visit a website..",
+    desc: "Have you ever wondered how are you able to securely visit the websites?\n Have you came across these terms DNS, TCP/IP, HTTPS, SSL/TLS?  what the hell are they? jus read the article, it might sound boring at the beginning but believe me its far intresting than it appears.",
     link: "https://dev.to/scofieldidehen/what-happens-when-you-visit-a-website-dj8",
     imgUrl: "https://img.icons8.com/ios/50/FFFFFF/internet--v1.png"
   }]
@@ -57,7 +57,7 @@ export default function Home() {
               2500,
               'I`m a Web Developer',
               2500,
-              'I`m an ML enthusiast',
+              'I`m learning ML',
               2500
             ]}
             className='type-animation'
@@ -67,8 +67,8 @@ export default function Home() {
             repeat={Infinity}
           />
           <p>
-            Welcome to my digital space! I`m Praneesh, a web developer
-            proficient in languages like {" "}
+            Welcome to my digital space! I`m Praneesh, a Computer Science Student
+            proficient in {" "}
             <span className="code">C</span>,{" "}
             <span className="code">C++</span>,{" "}
             <span className="code">Python</span>,{" "}
@@ -80,15 +80,13 @@ export default function Home() {
             <span className="code">mongodb</span>,{" "}
             <span className="code">ejs</span>,{" "}
             <span className="code">flask</span>,and{" "}
-            <span className="code">jinja2</span>.{" "} With a keen eye for precision,
-            I specialize in replicating websites with exacting detail.
+            <span className="code">jinja2</span>.{" "} I code for fun. Here I might talk too much, bear with me and read the content. I`ll try to keep the content interesting..
           </p>
-          <h2>Passion for Technology:</h2>
+          <h2>Passion for Tech:</h2>
           <p>
-            Beyond coding, I am passionate about staying at the forefront of
-            tech innovations. In my free time, I immerse myself in tech news and
-            optimistic science videos, reflecting my commitment to continuous
-            learning.
+           Once I bought a ethernet to HDMI converter basically it was a cheap one. When I connected it didn`t work. I thought drivers in laptop weren`t there, so I went online and searched for one and installed (POV: Back then I was a noob with very less tech knowledge..){"\n"}Turns out its a virus :){"\n"}
+           Ah, I`m jus saying I will experiment anything to learn.{"\n"}
+           I read Tech articles. I am learning competitive coding.{"\n"} Basically I`m boring... 
           </p>
         </div>
         <div className="articles">

@@ -111,7 +111,7 @@ a {
 .articles h2{
   color: #ffa96b;
   border-bottom: 3px dotted #ffa96b;
-  margin: 1rem 0 0.5rem 0;
+  margin: 2rem 0 0.5rem 0;
 }
 .articles h2::after{
     content: "";
@@ -130,9 +130,11 @@ a {
 .article img{
   width: 4rem;
 }
+p{
+  white-space: pre-line;
+}
 .article h3,.article p{
   font-weight: 200;
-  /* padding: 0.25rem; */
   margin: 0;
 }
 .article h3{
