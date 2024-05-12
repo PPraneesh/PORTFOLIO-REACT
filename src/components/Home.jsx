@@ -30,7 +30,7 @@ export default function Home() {
   }, []);
   const articles = [{
     title: "bloom filter - a data structure",
-    desc: "A data structure that lies.. 😲\nhow does it help? is it even useful?\n That's intresting I guess,  go ahead read the article.",
+    desc: "A data structure that lies.. 😲\nhow does it help? is it even useful?\n That's interesting I guess,  go ahead read the article.",
     link: "https://samwho.dev/bloom-filters/",
     imgUrl: "https://img.icons8.com/glyph-neue/100/FFFFFF/parallel-tasks.png"
   }, {
@@ -40,7 +40,7 @@ export default function Home() {
     imgUrl: "https://img.icons8.com/ios/100/FFFFFF/lock--v1.png"
   }, {
     title: "When you visit a website..",
-    desc: "Have you ever wondered how are you able to securely visit the websites?\n Have you came across these terms DNS, TCP/IP, HTTPS, SSL/TLS?  what the hell are they? jus read the article, it might sound boring at the beginning but believe me its far intresting than it appears.",
+    desc: "Have you ever wondered how are you able to securely visit the websites?\n Have you came across these terms DNS, TCP/IP, HTTPS, SSL/TLS?  what the hell are they? jus read the article, it might sound boring at the beginning but believe me its far interesting than it appears.",
     link: "https://dev.to/scofieldidehen/what-happens-when-you-visit-a-website-dj8",
     imgUrl: "https://img.icons8.com/ios/50/FFFFFF/internet--v1.png"
   }]
