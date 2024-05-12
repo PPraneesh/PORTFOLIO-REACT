@@ -96,10 +96,12 @@ button:hover{
   display: flex;
   align-items: center;
 }
-.playground {
-  height: 100%;
-  max-height: 18rem;
-  overflow-y: hidden;
+.hello h2{
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.hello p{
+  margin-top: 0rem;
 }
 a {
   padding: 0;
