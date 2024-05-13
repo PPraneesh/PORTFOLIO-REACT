@@ -84,9 +84,7 @@ export default function Home() {
           </p>
           <h2>Passion for Tech:</h2>
           <p>
-           Once I bought a ethernet to HDMI converter basically it was a cheap one. When I connected it didn`t work. I thought drivers in laptop weren`t there, so I went online and searched for one and installed (POV: Back then I was a noob){"\n"}Turns out it`s a virus :){"\n"}
-           Ah, I`m jus saying I will experiment anything to learn.{"\n"}
-           I read Tech articles. I am learning competitive coding.{"\n"}Basically I`m boring.. but my portfolio isn`t.. 
+          Once I bought an ethernet to HDMI converter, it was a cheap one. When I connected it, it didn`t work. I thought drivers in the laptop weren`t there, so I went online and searched for one and installed (POV: Back then I was a noob).{"\n"}Turns out it was a virus :){"\n"}Ah, I`m just saying I will experiment with anything to learn.{"\n"}I read tech articles. I am learning competitive coding.{"\n"}Basically, I`m boring.. but my portfolio isn`t.
           </p>
         </div>
         <div className="articles">
