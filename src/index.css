@@ -1,15 +1,18 @@
 body {
-  background-color: rgb(34, 33, 41);
+  background-color: hsl(248, 11%, 15%);  
   color: #fff;
   font-family: "Fira Code", Monaco, Consolas, Ubuntu Mono, monospace;
   font-size: 1.2rem;
   line-height: 1.5;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 3rem 3rem 0 3rem;
 }
 /* colors */
-.green {
+.green{
   background: #78e2a0;
 }
-.yellow {
+.yellow{
   background: #ffa86a;
 }
 .red{
@@ -44,21 +47,21 @@ body {
     #ffa86a 2px,
     transparent 0,
     transparent 10px
-  );
-  flex-grow: 1;
-  line-height: 1rem;
-  margin-left: 2px;
-}
-.repeat_red {
-  content: "";
-  background: repeating-linear-gradient(
-    90deg,
-    #ff6266,
-    #ff6266 2px,
-    transparent 0,
-    transparent 10px
-  );
-  flex-grow: 1;
+    );
+    flex-grow: 1;
+    line-height: 1rem;
+    margin-left: 2px;
+  }
+  .repeat_red {
+    content: "";
+    background: repeating-linear-gradient(
+      90deg,
+      #ff6266,
+      #ff6266 2px,
+      transparent 0,
+      transparent 10px
+      );
+      flex-grow: 1;
   line-height: 1rem;
   margin-left: 2px;
 }
@@ -70,12 +73,33 @@ body {
     #78e2a0 2px,
     transparent 0,
     transparent 10px
-  );
-  flex-grow: 1;
-  line-height: 1rem;
-  margin-left: 2px;
-}
+    );
+    flex-grow: 1;
+    line-height: 1rem;
+    margin-left: 2px;
+  }
 /* colors */
+.header{
+position: fixed;
+background-color: #222129da;
+opacity: 1;
+background-image: url("https://tympanus.net/Development/ImageExpansionTypography/img/noise.png");
+}
+.header_space{
+  display: flex;
+  line-height: 1rem;
+  width: 100%;
+}
+.progress_span{
+  margin-bottom: 4px;
+}
+.progress_cont {
+  display: flex;   
+  align-items: center
+}
+/* .progress_cont span{
+  color:#222129
+} */
 a {
   color: #fff;
   text-decoration: none;
@@ -86,11 +110,8 @@ a:hover {
 button:hover{
   cursor: pointer;
 }
-.body {
-
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 3rem 3rem 0 3rem;
+.logo{
+  white-space:nowrap;
 }
 .head {
   display: flex;
@@ -154,7 +175,7 @@ p{
 .list {
   display: flex;
   padding: 0;
-  margin: 0.8rem 0 0 0;
+  margin: 0;
 }
 .list > a {
   margin-right: 1rem;
