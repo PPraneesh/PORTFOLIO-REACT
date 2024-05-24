@@ -1,12 +1,10 @@
 body {
-  background-color: hsl(248, 11%, 15%);  
+  background-color: #23222a;  
   color: #fff;
   font-family: "Fira Code", Monaco, Consolas, Ubuntu Mono, monospace;
   font-size: 1.2rem;
   line-height: 1.5;
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 3rem 3rem 0 3rem;
+  margin: 0;
 }
 /* colors */
 .green{
@@ -79,9 +77,15 @@ body {
     margin-left: 2px;
   }
 /* colors */
+.body{
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0rem 3rem 0 3rem;
+}
 .header{
+  padding-top: 3rem;
 position: fixed;
-background-color: #222129da;
+background-color: #222129ea;
 opacity: 1;
 background-image: url("https://tympanus.net/Development/ImageExpansionTypography/img/noise.png");
 }
@@ -92,6 +96,7 @@ background-image: url("https://tympanus.net/Development/ImageExpansionTypography
 }
 .progress_span{
   margin-bottom: 4px;
+  font-weight: 100;
 }
 .progress_cont {
   display: flex;   
@@ -341,6 +346,10 @@ p{
 @media screen and (max-width: 650px) {
   .body {
     padding: 1rem;
+    padding-top: 0rem;
+  }
+  .header{
+    padding-top: 1rem;
   }
   li {
     margin-right: 0.8rem;

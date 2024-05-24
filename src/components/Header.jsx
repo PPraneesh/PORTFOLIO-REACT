@@ -5,7 +5,7 @@ import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 export default function Header(props) {
   let location = useLocation();
   const { scrollYProgress } = useScroll();
-  const [lenProgress, setLenProgress] = useState(1);
+  const [lenProgress, setLenProgress] = useState(0);
   const [progressLen, setProgressLen] = useState(0);
   const [lastestProgress, setLatestProgress] = useState(0);
 
@@ -26,7 +26,6 @@ export default function Header(props) {
   //     setLenProgress(len);
   //   }
   // }, []);
-
   const widthProgressFinder = () => {
     var element = document.getElementsByClassName("header")[0];
     var width = element.offsetWidth;
@@ -34,16 +33,14 @@ export default function Header(props) {
     var widthSpan = elementSpan.offsetWidth;
     var elementLogo = document.getElementsByClassName("logo")[0];
     var widthLogo = elementLogo.offsetWidth;
-    var len = Math.round((width - widthLogo) / widthSpan);
+    var len = Math.round((width - widthLogo) / (widthSpan+2));
     setLenProgress(len);
-    console.log(len);
   };
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     widthProgressFinder();
     setLatestProgress(latest);
     setProgressLen(Math.round(lastestProgress * lenProgress));
-    console.log(lenProgress, progressLen);
   });
 
   function handleRouteChange(pathname) {
@@ -89,10 +86,8 @@ export default function Header(props) {
       ...props.route,
       loc: newLoc,
     });
-    setTimeout(() => {
-      widthProgressFinder();
-      setProgressLen(Math.round(lastestProgress * lenProgress));
-    }, 100);
+    widthProgressFinder();
+    setProgressLen(Math.round(lastestProgress * lenProgress));
   }
 
   function handleMouseLeave() {
@@ -101,9 +96,7 @@ export default function Header(props) {
       ...props.route,
       loc: originalLoc,
     });
-    setTimeout(() => {
-      widthProgressFinder();
-    }, 100);
+    widthProgressFinder();
   }
   var bodyElement = document.getElementsByClassName("outlet")[0];
   var bodyWidth = bodyElement ? bodyElement.offsetWidth : 0;
@@ -125,17 +118,17 @@ export default function Header(props) {
           <motion.div className="progress_cont">
           <span
                   className={`progress_span ${props.route.theme}_color`}
-                  style={{ fontSize: logoHeight }}
+                  style={{ fontSize: logoHeight+"px" }}
                 >
                   {"["}
                 </span>
-            {Array(progressLen)
+            {Array(progressLen > 0 ? progressLen : 0)
               .fill()
               .map((_, i) => (
                 <span
                   className={`progress_span ${props.route.theme}_color`}
                   key={i}
-                  style={{ fontSize: logoHeight }}
+                  style={{ fontSize: logoHeight+"px" }}
                 >
                   #
                 </span>
@@ -148,14 +141,14 @@ export default function Header(props) {
                 <span
                   className={`progress_span ${props.route.theme}_color`}
                   key={i}
-                  style={{ fontSize: logoHeight }}
+                  style={{ fontSize: logoHeight+"px" }}
                 >
                   .
                 </span>
               ))}
                <span
                   className={`progress_span ${props.route.theme}_color`}
-                  style={{ fontSize: logoHeight }}
+                  style={{ fontSize: logoHeight+"px" }}
                 >
                   {"]"}
                 </span>
