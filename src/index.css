@@ -84,10 +84,10 @@ body {
 }
 .header{
   padding-top: 3rem;
-position: fixed;
-background-color: #222129ea;
-opacity: 1;
-background-image: url("https://tympanus.net/Development/ImageExpansionTypography/img/noise.png");
+  position: fixed;
+  z-index: 1;
+  background-color: #222129ea;
+  opacity: 1;
 }
 .header_space{
   display: flex;
@@ -279,10 +279,11 @@ p{
   margin: 0;
 }
 .react-pdf__Page__canvas {
+  z-index: -1;
   margin: 0 auto;
   width: 100% !important;
   height: auto !important;
-  display: block;
+  /* display: block; */
   border: 1px solid #000;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
