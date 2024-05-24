@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useEffect,useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
@@ -13,19 +13,19 @@ export default function Header(props) {
     handleRouteChange(location.pathname);
   }, [location.pathname]);
 
-  // useEffect(() => {
-  //   var element = document.getElementsByClassName('header')[0];
-  //   var elementSpan = document.getElementsByClassName('progress_span')[1];
-  //   var elementLogo = document.getElementsByClassName('logo')[0];
+  useLayoutEffect(() => {
+    var element = document.getElementsByClassName('header')[0];
+    var elementSpan = document.getElementsByClassName('progress_span')[1];
+    var elementLogo = document.getElementsByClassName('logo')[0];
 
-  //   if (element && elementSpan && elementLogo) {
-  //     var width = element.offsetWidth;
-  //     var widthSpan = elementSpan.offsetWidth;
-  //     var widthLogo = elementLogo.offsetWidth;
-  //     var len = (Math.round((width-widthLogo)/widthSpan));
-  //     setLenProgress(len);
-  //   }
-  // }, []);
+    if (element && elementSpan && elementLogo) {
+      var width = element.offsetWidth;
+      var widthSpan = elementSpan.offsetWidth;
+      var widthLogo = elementLogo.offsetWidth;
+      var len = (Math.round((width-widthLogo)/widthSpan));
+      setLenProgress(len);
+    }
+  }, []);
   const widthProgressFinder = () => {
     var element = document.getElementsByClassName("header")[0];
     var width = element.offsetWidth;
@@ -33,7 +33,7 @@ export default function Header(props) {
     var widthSpan = elementSpan.offsetWidth;
     var elementLogo = document.getElementsByClassName("logo")[0];
     var widthLogo = elementLogo.offsetWidth;
-    var len = Math.round((width - widthLogo) / (widthSpan+2));
+    var len = Math.round((width - widthLogo) / (widthSpan))-2;
     setLenProgress(len);
   };
 
