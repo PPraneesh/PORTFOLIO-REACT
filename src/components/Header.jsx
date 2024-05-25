@@ -8,6 +8,10 @@ export default function Header(props) {
   const [lenProgress, setLenProgress] = useState(0);
   const [progressLen, setProgressLen] = useState(0);
   const [lastestProgress, setLatestProgress] = useState(0);
+  const [slash,setSlash] = useState({
+    state:0,
+    value:"\\"
+  });
 
   useEffect(() => {
     handleRouteChange(location.pathname);
@@ -26,6 +30,28 @@ export default function Header(props) {
       setLenProgress(len);
     }
   }, []);
+  useEffect(() => {
+  setTimeout(() => {
+    if(slash.state === 0){
+      setSlash({
+        state:1,
+        value:"/"
+      })
+    }
+    else if(slash.state === 1){
+      setSlash({
+        state:2,
+        value:"|"
+      })
+    }
+    else if(slash.state === 2){
+      setSlash({
+        state:0,
+        value:"\\"
+      })
+    }
+  }, 400);
+  }, [slash]);
   const widthProgressFinder = () => {
     var element = document.getElementsByClassName("header")[0];
     var width = element.offsetWidth;
@@ -33,7 +59,7 @@ export default function Header(props) {
     var widthSpan = elementSpan.offsetWidth;
     var elementLogo = document.getElementsByClassName("logo")[0];
     var widthLogo = elementLogo.offsetWidth;
-    var len = Math.round((width - widthLogo) / (widthSpan))-2;
+    var len = Math.round((width - widthLogo) / (widthSpan))-4;
     setLenProgress(len);
   };
 
@@ -151,6 +177,12 @@ export default function Header(props) {
                   style={{ fontSize: logoHeight+"px" }}
                 >
                   {"]"}
+                </span>
+                <span
+                  className={`progress_span ${props.route.theme}_color`}
+                  style={{ fontSize: logoHeight+"px" }}
+                >
+                  {" "}{slash.value}
                 </span>
           </motion.div>
         </div>
