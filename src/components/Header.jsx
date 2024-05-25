@@ -1,4 +1,4 @@
-import { useLayoutEffect, useEffect,useState } from "react";
+import { useEffect,useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
@@ -17,19 +17,10 @@ export default function Header(props) {
     handleRouteChange(location.pathname);
   }, [location.pathname]);
 
-  useLayoutEffect(() => {
-    var element = document.getElementsByClassName('header')[0];
-    var elementSpan = document.getElementsByClassName('progress_span')[1];
-    var elementLogo = document.getElementsByClassName('logo')[0];
+  useEffect(() => {
+    widthProgressFinder();
+  }, [props.route]);
 
-    if (element && elementSpan && elementLogo) {
-      var width = element.offsetWidth;
-      var widthSpan = elementSpan.offsetWidth;
-      var widthLogo = elementLogo.offsetWidth;
-      var len = (Math.round((width-widthLogo)/widthSpan));
-      setLenProgress(len);
-    }
-  }, []);
   useEffect(() => {
   setTimeout(() => {
     if(slash.state === 0){
@@ -112,7 +103,6 @@ export default function Header(props) {
       ...props.route,
       loc: newLoc,
     });
-    widthProgressFinder();
     setProgressLen(Math.round(lastestProgress * lenProgress));
   }
 
@@ -122,7 +112,6 @@ export default function Header(props) {
       ...props.route,
       loc: originalLoc,
     });
-    widthProgressFinder();
   }
   var bodyElement = document.getElementsByClassName("outlet")[0];
   var bodyWidth = bodyElement ? bodyElement.offsetWidth : 0;
