@@ -6,13 +6,14 @@ import { TypeAnimation } from 'react-type-animation';
 export default function Home() {
   const toast = Toastify({
     text: "Check out the new projects page!",
-    duration: 5000,
+    duration: 4000,
     destination: "/projects",
     newWindow: false,
     close: true,
-    gravity: "top",
+    gravity: "center",
     position: "right",
     stopOnFocus: true,
+    className: "info-toast",
     style: {
       background: "rgb(34, 33, 41)",
       display: "flex",
@@ -21,7 +22,9 @@ export default function Home() {
       gap: "1rem",
       fontSize: "1rem",
       padding: "1rem",
+      marginTop:"6rem",
       maxWidth: "12rem",
+      boxShadow: "0px 7px 29px 0px rgba(0, 0, 0, 0.3)",
     },
   });
 

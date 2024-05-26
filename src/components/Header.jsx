@@ -8,6 +8,7 @@ export default function Header(props) {
   const [lenProgress, setLenProgress] = useState(0);
   const [progressLen, setProgressLen] = useState(0);
   const [lastestProgress, setLatestProgress] = useState(0);
+  const [linkHoverLock, setLinkHoverLock] = useState(false);
   const [slash,setSlash] = useState({
     state:0,
     value:"\\"
@@ -18,32 +19,6 @@ export default function Header(props) {
   }, [location.pathname]);
 
   useEffect(() => {
-    widthProgressFinder();
-  }, [props.route]);
-
-  useEffect(() => {
-  setTimeout(() => {
-    if(slash.state === 0){
-      setSlash({
-        state:1,
-        value:"/"
-      })
-    }
-    else if(slash.state === 1){
-      setSlash({
-        state:2,
-        value:"|"
-      })
-    }
-    else if(slash.state === 2){
-      setSlash({
-        state:0,
-        value:"\\"
-      })
-    }
-  }, 400);
-  }, [slash]);
-  const widthProgressFinder = () => {
     var element = document.getElementsByClassName("header")[0];
     var width = element.offsetWidth;
     var elementSpan = document.getElementsByClassName("progress_span")[0];
@@ -52,12 +27,33 @@ export default function Header(props) {
     var widthLogo = elementLogo.offsetWidth;
     var len = Math.round((width - widthLogo) / (widthSpan))-4;
     setLenProgress(len);
-  };
+  }, [props.route,lastestProgress]);
+
+  useEffect(() => {
+    if(lastestProgress)
+      setProgressLen(Math.round(lastestProgress * lenProgress));
+  }, [lenProgress,lastestProgress]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if(slash.state === 0){
+        setSlash({
+          state:1,
+          value:"/"
+        })
+      }
+      else if(slash.state === 1){
+        setSlash({
+          state:0,
+          value:"\\"
+        })
+      }
+    }, 350);
+  }, [slash]);
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    widthProgressFinder();
     setLatestProgress(latest);
-    setProgressLen(Math.round(lastestProgress * lenProgress));
+    console.log(lenProgress,progressLen);
   });
 
   function handleRouteChange(pathname) {
@@ -97,16 +93,18 @@ export default function Header(props) {
     }
   }
 
-  function handleLinkEnter(locString) {
+  function handleMouseEnter(locString) {
+    if(linkHoverLock) return;
     let newLoc = props.route.loc + ` cd ${locString}`;
     props.setRoute({
       ...props.route,
       loc: newLoc,
     });
-    setProgressLen(Math.round(lastestProgress * lenProgress));
+    setLinkHoverLock(true);
   }
 
   function handleMouseLeave() {
+    setLinkHoverLock(false);
     let originalLoc = props.route.loc.split("cd")[0];
     props.setRoute({
       ...props.route,
@@ -149,7 +147,7 @@ export default function Header(props) {
                 </span>
               ))}
             {Array(
-              lenProgress - progressLen > 0 ? lenProgress - progressLen : 0
+              (lenProgress - progressLen) > 0 ? (lenProgress - progressLen) : 0
             )
               .fill()
               .map((_, i) => (
@@ -178,7 +176,7 @@ export default function Header(props) {
         <ul className="list">
           <Link className="link" to="">
             <span
-              onMouseEnter={() => handleLinkEnter("..")}
+              onMouseEnter={() => handleMouseEnter("..")}
               onMouseLeave={handleMouseLeave}
             >
               /home
@@ -186,7 +184,7 @@ export default function Header(props) {
           </Link>
           <Link className="link" to="about">
             <span
-              onMouseEnter={() => handleLinkEnter("about")}
+              onMouseEnter={() => handleMouseEnter("about")}
               onMouseLeave={handleMouseLeave}
             >
               About me
@@ -199,7 +197,7 @@ export default function Header(props) {
             <div className="dropdown-content">
               <Link className="link" to="blogs">
                 <span
-                  onMouseEnter={() => handleLinkEnter("blogs")}
+                  onMouseEnter={() => handleMouseEnter("blogs")}
                   onMouseLeave={handleMouseLeave}
                 >
                   Blogs
@@ -207,7 +205,7 @@ export default function Header(props) {
               </Link>
               <Link className="link" to="projects">
                 <span
-                  onMouseEnter={() => handleLinkEnter("projects")}
+                  onMouseEnter={() => handleMouseEnter("projects")}
                   onMouseLeave={handleMouseLeave}
                 >
                   My Projects
@@ -215,7 +213,7 @@ export default function Header(props) {
               </Link>
               <Link className="link" to="resume">
                 <span
-                  onMouseEnter={() => handleLinkEnter("resume")}
+                  onMouseEnter={() => handleMouseEnter("resume")}
                   onMouseLeave={handleMouseLeave}
                 >
                   My resume

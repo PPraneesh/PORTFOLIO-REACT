@@ -87,7 +87,7 @@ body {
   position: fixed;
   z-index: 1;
   background-color: #222129ea;
-  opacity: 1;
+  backdrop-filter: blur(.2rem);
 }
 .header_space{
   width: 100%;
@@ -178,14 +178,14 @@ p{
   display: none;
   position: absolute;
   background-color: #222129;
-  border: 1px solid #fff;
+  border: rgba(255, 255, 255, 0.2) 2px solid;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
   margin-top: 0;
 }
 .dropdown-content a {
   color: #fff;
-  padding: 0.8rem 1rem;
+  padding: 0.6rem 1rem;
   text-decoration: none;
   display: block;
 }
@@ -206,6 +206,10 @@ p{
 }
 .type-animation{
     font-size: 3rem;
+}
+.info-toast:hover{
+  cursor: pointer;
+  text-shadow: #ffffff23;
 }
 .about-code {
   color: #78e2a0;
