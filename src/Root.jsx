@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import PropTypes from 'prop-types';
+import { Analytics } from '@vercel/analytics/react';
 import { useLayoutEffect, useState } from "react";
 
 export default function Root(props) {
@@ -25,6 +26,7 @@ export default function Root(props) {
         <Outlet />
         </div>
         <Footer />
+        <Analytics/>
       </div>
     </>
   );
