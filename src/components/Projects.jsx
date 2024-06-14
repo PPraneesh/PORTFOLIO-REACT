@@ -3,6 +3,13 @@ import { useState } from "react";
 export default function Projects(props) {
   let projectDetails = [
     {
+      name:"AI-waiter",
+      description:"This is a simple AI waiter who can book a table for you at the restaurant and it will answer everything about restaurant.. actually it's based on baratie (a restaurant from the anime 'one piece')",
+      gifLink:"AI-waiter.gif",
+      linkFiles:"https://github.com/PPraneesh/AI_assistant-waiter",
+      linkProject:"#",
+    },
+    {
       name: "The Coder Companion",
       description:
         "The Coder Companion: Your gateway to intuitive programming mastery. With AI assistance and a user-friendly interface, embark on an efficient journey to tackle coding challenges with confidence.",
