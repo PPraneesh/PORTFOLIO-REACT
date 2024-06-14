@@ -121,7 +121,7 @@ export default function Header(props) {
       <div
         className="header"
         style={{
-          width: bodyWidth,
+          width: bodyWidth+1,
         }}
       >
         <div className="head">
