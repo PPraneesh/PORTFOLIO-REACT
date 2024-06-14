@@ -26,7 +26,7 @@ export default function Header(props) {
     var elementLogo = document.getElementsByClassName("logo")[0];
     var widthLogo = elementLogo.offsetWidth;
     var len = Math.round((width - widthLogo) / (widthSpan))-4;
-    setLenProgress(len);
+    len > 0 ? setLenProgress(len) : setLenProgress(0);
   }, [props.route,lastestProgress]);
 
   useEffect(() => {
