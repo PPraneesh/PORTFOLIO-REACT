@@ -10,7 +10,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Resume from "./components/Resume";
 import Blogs from "./components/Blogs";
-
+import BlogViewer from "./components/BlogViewer";
 export default function App() {
   const [route, setRoute] = useState({
     loc: "C:\\home>",
@@ -40,6 +40,9 @@ export default function App() {
         {
           path: "resume",
           element: <Resume route={route} />,
+        },{
+          path: '/blogs/:blogname',
+          element: <BlogViewer route={route} />,
         }
       ],
     },

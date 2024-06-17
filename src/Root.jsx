@@ -21,7 +21,7 @@ export default function Root(props) {
       <div className="body">
         <Header route={props.route} setRoute={props.setRoute} />
         <div className="outlet" style={{
-          paddingTop: bodyHeight + listHeight
+          paddingTop: bodyHeight + listHeight 
         }}>
         <Outlet />
         </div>
