@@ -6,7 +6,7 @@ const blogData = [
     date: "17 June 2024",
     title: "MERN Deployment guide on Vercel",
     link: "/blogs/deploy",
-    link_online: "#",
+    link_online: "https://dev.to/ppraneesh/deploy-react-node-projects-for-free-on-vercel-4365",
     contentsShort: "This is a blog about deploying MERN stack applications on Vercel. It will be definitely helpful for the people who are deploying their applications for the first time.",
     contents: `
 ###
