@@ -119,7 +119,7 @@ export default function Blogs(props) {
                 <Link to={blog.link}>Read it here </Link>
               </button>
               <button className={`buttons ${props.route.theme}_Bcolor`}>
-              <Link to={blog.link}>Read it on dev.to </Link>
+              <Link to={blog.link_online}>Read it on dev.to </Link>
               </button>
             </div>
           </div>
