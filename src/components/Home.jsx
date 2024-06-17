@@ -5,9 +5,9 @@ import { TypeAnimation } from 'react-type-animation';
 
 export default function Home() {
   const toast = Toastify({
-    text: "Check out the new projects page!",
+    text: "Hey, wrote a new blog read it..",
     duration: 4000,
-    destination: "/projects",
+    destination: "/blogs",
     newWindow: false,
     close: true,
     gravity: "center",
