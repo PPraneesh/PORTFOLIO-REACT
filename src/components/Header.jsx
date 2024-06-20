@@ -16,6 +16,7 @@ export default function Header(props) {
 
   useEffect(() => {
     handleRouteChange(location.pathname);
+    console.log(location)
   }, [location.pathname]);
 
   useEffect(() => {
@@ -75,6 +76,12 @@ export default function Header(props) {
           loc: "C:\\home\\blogs>",
           theme: "yellow",
         });
+        break;
+      case "/blogs/deploy" :
+        props.setRoute({
+          loc:"C:\\home\\blogs\\deploy",
+          theme: "yellow",
+        })
         break;
       case "/projects":
         props.setRoute({

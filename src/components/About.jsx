@@ -50,6 +50,7 @@ export default function About(props) {
             blockSize={9}
             blockMargin={5}
             errorMessage="Could not load GitHub calendar of PPraneesh"
+            colorScheme="dark"        
             color="green"
             fontSize={14}
             style={{ cursor: "crosshair" }}
