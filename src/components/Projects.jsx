@@ -67,8 +67,14 @@ export default function Projects(props) {
   return (
     <>
       <h2 className={`post-title ${props.route.theme}_color`}>My Projects</h2>
-      <p className={`${props.route.theme}_color`}>Parshi :: 3 min read</p>
-      <p>Here are some projects which I made :)</p>
+        <p className={`${props.route.theme}_color`}>Parshi :: 3 min read</p>
+      
+      <div className="proj-1">
+        <p>{"'"}An idiot admires complexity, {"\n"}a genius admires simplicity{"'"}<span style={{display:"block", textAlign:"right"}} >-Fireship</span></p>
+      </div>
+      <div >
+        <p>As I am no genius all my simple projects are complexly coded.. {"\n"} It took a lot of pain and effort to make them, take a look and critize me..</p>
+      </div>
       {projects.map((projectDetails, i) => {
         return (
           <div className="project" key={i}>
