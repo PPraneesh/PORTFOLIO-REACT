@@ -16,7 +16,6 @@ export default function Header(props) {
 
   useEffect(() => {
     handleRouteChange(location.pathname);
-    console.log(location)
   }, [location.pathname]);
 
   useEffect(() => {
