@@ -35,9 +35,6 @@ export default function About(props) {
             Let`s explore the possibilities together!
           </p>
         </div>
-        <div className="tree">  
-          <img src="tree.svg" alt="" />
-        </div>
         <div className="open-source">
           <h2>Open Source Contributions</h2>
           <p>
