@@ -3,6 +3,20 @@ import { useState } from "react";
 export default function Projects(props) {
   let projectDetails = [
     {
+      name:"cpflashNoter",
+      description:"A platform for competitive coders to share problems and innovative approaches, with AI-powered note-taking and detailed solution breakdowns for improved understanding and efficient interview preparation.",
+      gifLink:"underConstruction.gif",
+      linkFiles:"https://github.com/PPraneesh/cpflashnoter",
+      linkProject:"https://cpflashnoter.vercel.app/"
+    },
+    {
+      name:"sports-fest registrations",
+      description:"A webapp that allows teams to register and pay for the sports fest online, with features like payment gateway integration, email confirmation, and easy registration management, secure payment processing, and user-friendly interface.",
+      gifLink:"underConstruction.gif",
+      linkFiles:"https://github.com/PPraneesh/sports-fest",
+      linkProject:"https://sports-fest.vercel.app/"
+    },
+    {
       name:"AI-waiter",
       description:"This is a simple AI waiter who can book a table for you at the restaurant and it will answer everything about restaurant.. actually it's based on baratie (a restaurant from the anime 'one piece')",
       gifLink:"AI-waiter.gif",
