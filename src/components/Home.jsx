@@ -1,35 +1,26 @@
-import Toastify from 'toastify-js'
-import "toastify-js/src/toastify.css"
+import toast from "react-hot-toast";
 import { useEffect } from "react";
 import { TypeAnimation } from 'react-type-animation';
+import { useNavigate } from "react-router-dom";
+
 
 export default function Home() {
-  const toast = Toastify({
-    text: "Hey, wrote a new blog read it..",
-    duration: 4000,
-    destination: "/blogs",
-    newWindow: false,
-    close: true,
-    gravity: "center",
-    position: "right",
-    stopOnFocus: true,
-    className: "info-toast",
-    style: {
-      background: "rgb(34, 33, 41)",
-      display: "flex",
-      opacity: 0.9,
-      justifyContent: "center",
-      gap: "1rem",
-      fontSize: "1rem",
-      padding: "1rem",
-      marginTop:"6rem",
-      maxWidth: "12rem",
-      boxShadow: "0px 7px 29px 0px rgba(0, 0, 0, 0.3)",
-    },
-  });
-
+  const navigate = useNavigate();
   useEffect(() => {
-    toast.showToast();
+    toast('New things in /projects',
+      {
+        icon: '🖥️',
+        style: {
+          borderRadius: '10px',
+          background: '#333',
+          color: '#fff',
+        },
+        onClick: () => {
+          console.log('onClick event triggered');
+          navigate("/projects");
+        }
+      }
+    );
   }, []);
   const articles = [{
     title: "bloom filter - a data structure",

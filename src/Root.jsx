@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import PropTypes from 'prop-types';
 import { Analytics } from '@vercel/analytics/react';
 import { useLayoutEffect, useState } from "react";
+import { Toaster } from 'react-hot-toast';
 
 export default function Root(props) {
   const [bodyHeight, setBodyHeight] = useState(0);
@@ -18,6 +19,7 @@ export default function Root(props) {
 
   return (
     <>
+    <Toaster position="top-right" />
       <div className="body">
         <Header route={props.route} setRoute={props.setRoute} />
         <div className="outlet" style={{
