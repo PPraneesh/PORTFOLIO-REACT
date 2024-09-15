@@ -4,15 +4,15 @@ export default function Projects(props) {
   let projectDetails = [
     {
       name:"cpflashNoter",
-      description:"A platform for competitive coders to share problems and innovative approaches, with AI-powered note-taking and detailed solution breakdowns for improved understanding and efficient interview preparation.",
-      gifLink:"underConstruction.gif",
+      description:"A platform for competitive coders to save problems and innovative approaches, with AI-powered note-taking and detailed solution breakdowns for improved understanding and efficient interview preparation.",
+      gifLink:"cpflashNoter.gif",
       linkFiles:"https://github.com/PPraneesh/cpflashnoter",
       linkProject:"https://cpflashnoter.vercel.app/"
     },
     {
       name:"sports-fest registrations",
       description:"A webapp that allows teams to register and pay for the sports fest online, with features like payment gateway integration, email confirmation, and easy registration management, secure payment processing, and user-friendly interface.",
-      gifLink:"underConstruction.gif",
+      gifLink:"sports-fest-registrations.gif",
       linkFiles:"https://github.com/PPraneesh/sports-fest",
       linkProject:"https://sports-fest.vercel.app/"
     },
