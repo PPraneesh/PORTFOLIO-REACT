@@ -135,6 +135,13 @@ p{
 .article h3{
   color: #ffa96b;
 }
+.madcoder{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.open-source{
+  margin: 0 0 1rem 0;
+}
 .article a:hover{
   text-decoration: underline #ffa96b;
 }
@@ -193,7 +200,7 @@ p{
   margin-top: 0.35rem;
 }
 .intro{
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
 }
 .code {
   background-color: rgba(255, 168, 106, 0.2);

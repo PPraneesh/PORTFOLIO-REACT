@@ -7,10 +7,13 @@ export default function About(props) {
       <p className={`${props.route.theme}_color about_name`}>Parshi Praneesh</p>
       <div className="post">
         <div className="intro">
-          <h2>Allow Me To Introduce Myself</h2>
+          <div className="madcoder">
+            <img src="/GIFs/madCoder.gif" alt="" />
+            <h2>It`s me when I`m coding something.</h2>
+          </div>
           <p>
-            Heya I`m Parshi Praneesh, a web developer with expertise in languages
-            like{" "}
+          Ahh.. I love development, coding and stuff. I know the following tech stack,
+          {" "}
             <span className="about-code">C</span>,{" "}
             <span className="about-code">C++</span>,{" "}
             <span className="about-code">Python</span>,{" "}
@@ -22,18 +25,15 @@ export default function About(props) {
             <span className="about-code">mongodb</span>,{" "}
             <span className="about-code">ejs</span>,{" "}
             <span className="about-code">flask</span>,and{" "}
-            <span className="about-code">jinja2</span>.{" "}
-            In a notable hackathon, my
-            team mastered Python for web development in a day and built a winning
-            chatbot with GPT-3.5`s API and MongoDB in just two days.
+            <span className="about-code">jinja2</span>.{" \n"}
             <br />
-            <br />
-            As a data science undergraduate at VNR VJIET, I stay updated on the
-            latest tech trends, blending my passion for technology with a knack
-            for replicating websites with precision. Eager to delve into machine
-            learning, I`m open to collaborations to create exceptional websites.
-            Let`s explore the possibilities together!
+            I`m a data science undergraduate at VNR VJIET, I try to stay updated on the
+            latest tech trends. Eager to delve into machine learning, I`m open to collaborations :  )
           </p>
+        </div>
+        <div>
+          <h2>Here`s something on which I can flex</h2>
+              <p>I recently won JPMorgan Chase`s Code for good hackathon. It was an amazing experience, and I won an iPad too. So, If you want to know more about this I wrote a blog post on <a className={`code_green ${props.route.theme}_Bcolor`} href="https://www.linkedin.com/posts/parshipraneesh_codeforgood-jpmc-techforsocialgood-activity-7211003151884144641-Ibzx">Linkedin</a>.</p>
         </div>
         <div className="open-source">
           <h2>Open Source Contributions</h2>
