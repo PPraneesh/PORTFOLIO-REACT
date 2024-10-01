@@ -138,6 +138,13 @@ p{
 .madcoder{
   text-align: center;
   margin-bottom: 1rem;
+  & img{
+    max-width: 90%;
+
+  }
+}
+.toaster{
+  margin-top: "100px",
 }
 .open-source{
   margin: 0 0 1rem 0;

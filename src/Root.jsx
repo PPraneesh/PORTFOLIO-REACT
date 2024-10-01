@@ -19,7 +19,9 @@ export default function Root(props) {
 
   return (
     <>
-    <Toaster position="top-right" />
+    <div className="toaster">  
+      <Toaster position="top-right" />
+    </div>
       <div className="body">
         <Header route={props.route} setRoute={props.setRoute} />
         <div className="outlet" style={{

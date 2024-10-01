@@ -11,6 +11,7 @@ export default function Home() {
       {
         icon: '🖥️',
         style: {
+          marginTop: "100px",
           borderRadius: '10px',
           background: '#333',
           color: '#fff',
