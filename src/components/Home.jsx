@@ -2,6 +2,7 @@ import toast from "react-hot-toast";
 import { useEffect } from "react";
 import { TypeAnimation } from 'react-type-animation';
 import { useNavigate } from "react-router-dom";
+import Facts from "./Facts";
 
 
 export default function Home() {
@@ -77,9 +78,9 @@ export default function Home() {
             <span className="code">flask</span>,and{" "}
             <span className="code">jinja2</span>.{" "} I code for fun. Here I might talk too much, bear with me and read the content. I`ll try to keep the content interesting..
           </p>
-          <div className="tree">  
-          <img src="tree.svg" alt="" />
-        </div>
+         <div >
+           <Facts />
+         </div>
           <h2>Passion for Tech:</h2>
           <p>
           Once I bought an ethernet to HDMI converter, it was a cheap one. When I connected it, it didn`t work. I thought drivers in the laptop weren`t there, so I went online and searched for one and installed (POV: Back then I was a noob).{"\n"}Turns out it was a virus :){"\n"}Ah, I`m just saying I will experiment with anything to learn.{"\n"}I read tech articles. I am learning competitive coding.{"\n"}Basically, I`m boring.. but my portfolio isn`t.

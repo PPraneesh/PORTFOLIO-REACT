@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binary Grid Encoder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 40px);
+      grid-gap: 5px;
+      margin: 20px 0;
+    }
+
+    .cell {
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .cell.active {
+      background-color: black;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+
+    .output {
+      margin-top: 20px;
+      background-color: #fff;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: fit-content;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Binary Grid Encoder</h1>
+    <div id="grid" class="grid"></div>
+    <button id="encode-button" class="button">Get Binary Encoded</button>
+    <pre id="output" class="output"></pre>
+  </div>
+  <script>
+    // Create a 5x5 grid
+    const grid = document.getElementById("grid");
+    const output = document.getElementById("output");
+
+    // Initialize the grid
+    const gridSize = 5;
+    const cells = [];
+
+    for (let i = 0; i < gridSize; i++) {
+      cells[i] = [];
+      for (let j = 0; j < gridSize; j++) {
+        const cell = document.createElement("div");
+        cell.classList.add("cell");
+        cell.dataset.row = i;
+        cell.dataset.col = j;
+
+        // Toggle cell state on click
+        cell.addEventListener("click", () => {
+          cell.classList.toggle("active");
+        });
+
+        grid.appendChild(cell);
+        cells[i][j] = cell;
+      }
+    }
+
+    // Get binary encoded 2D array
+    document.getElementById("encode-button").addEventListener("click", () => {
+      const binaryGrid = cells.map(row =>
+        row.map(cell => (cell.classList.contains("active") ? 1 : 0))
+      );
+      output.textContent = JSON.stringify(binaryGrid, null, 2);
+    });
+  </script>
+</body>
+</html>
