@@ -49,11 +49,11 @@ export default function Home() {
             sequence={[
               'I`m Praneesh',
               3000,
-              'I`m an Undergrad',
+              'I`m an AI Engineer',
               2500,
               'I`m a Web Developer',
               2500,
-              'I`m learning ML',
+              'Trying to build SaaS',
               2500
             ]}
             className='type-animation'
