@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { TypeAnimation } from 'react-type-animation';
 import { useNavigate } from "react-router-dom";
 import Facts from "./Facts";
