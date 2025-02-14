@@ -2,7 +2,7 @@ import toast from "react-hot-toast";
 import { useEffect } from "react";
 import { TypeAnimation } from 'react-type-animation';
 import { useNavigate } from "react-router-dom";
-import Facts from "./Facts";
+import MatrixDisplay from 'dot-matrix-display'
 
 
 export default function Home() {
@@ -79,7 +79,19 @@ export default function Home() {
             <span className="code">jinja2</span>.{" "} I code for fun. Here I might talk too much, bear with me and read the content. I`ll try to keep the content interesting..
           </p>
          <div >
-           <Facts />
+           <MatrixDisplay
+             texts={[
+              {
+                pattern: "WINNER",
+                secondary_text: "@ JPMC HACKATHON 2024"
+              },
+              {
+                pattern: "INTERN",
+                secondary_text: "@ STALCON SOLUTIONS"
+              }
+            ]}
+            duration={3500}
+           />
          </div>
           <h2>Passion for Tech:</h2>
           <p>
