@@ -12,7 +12,7 @@ export default function About(props) {
             <h2>It`s me when I`m coding something.</h2>
           </div>
           <p>
-          Ahh.. I love development, coding and stuff. I know the following tech stack,
+          Ahh.. I love development, coding and stuff. What I know is
           {" "}
             <span className="about-code">C</span>,{" "}
             <span className="about-code">C++</span>,{" "}
@@ -27,8 +27,7 @@ export default function About(props) {
             <span className="about-code">flask</span>,and{" "}
             <span className="about-code">jinja2</span>.{" \n"}
             <br />
-            I`m a data science undergraduate at VNR VJIET, I try to stay updated on the
-            latest tech trends. Eager to delve into machine learning, I`m open to collaborations :  )
+            I`m an undergraduate at VNR VJIET and an intern at stalcon solutions, I am currently working with Intripid as an AI Engineer.
           </p>
         </div>
         <div>
@@ -55,7 +54,7 @@ export default function About(props) {
             style={{ cursor: "crosshair" }}
           />
         </div>
-          <p>Thanks for stopping by!!{" "}<span className="about-code">Have a nice day :)</span></p>
+          <p><span className="about-code">Have a nice day :)</span></p>
       </div>  
     </>
   );
