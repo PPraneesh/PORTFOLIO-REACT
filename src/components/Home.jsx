@@ -1,10 +1,8 @@
 import { TypeAnimation } from 'react-type-animation';
-import { useNavigate } from "react-router-dom";
 import MatrixDisplay from 'dot-matrix-display'
 
 
 export default function Home() {
-  const navigate = useNavigate();
   const articles = [{
     title: "bloom filter - a data structure",
     desc: "A data structure that lies.. 😲\nhow does it help? is it even useful?\n That's interesting I guess,  go ahead read the article.",

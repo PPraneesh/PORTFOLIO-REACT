@@ -3,6 +3,13 @@ import { useState } from "react";
 export default function Projects(props) {
   let projectDetails = [
     {
+      name: "dot-matrix-display",
+      description: "An NPM package that provides a React component for creating a dot matrix display effect with smooth text transitions. Ideal for retro-style animated displays and digital information boards.",
+      gifLink: "dot-matrix-display.gif",
+      linkFiles: "https://github.com/PPraneesh/dot-matrix-display",
+      linkProject: "https://www.npmjs.com/package/dot-matrix-display"
+    },
+    {
       name:"cpflashNoter",
       description:"A platform for competitive coders to save problems and innovative approaches, with AI-powered note-taking and detailed solution breakdowns for improved understanding and efficient interview preparation.",
       gifLink:"cpflashNoter.gif",
